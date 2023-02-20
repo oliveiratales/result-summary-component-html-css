@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --Light-red: hsl(0, 100%, 67%);
+  --Light-red-bg: hsla(0, 100%, 67%, 0.15);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Orangey-yellow-bg: hsl(39, 100%, 56%, 0.15);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Green-teal-bg: hsl(166, 100%, 37%, 0.15);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Cobalt-blue-bg: hsl(234, 85%, 45%, 0.15);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 9%, 59%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Light-lavender-text: hsl(241, 100%, 89%, 50%);
+  --Light-lavender-info: hsl(241, 100%, 89%, 70%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: hsl(221deg, 100%, 96%);
+}
+
+.container {
+  width: 660px;
+  display: flex;
+  border-radius: 2em;
+  background-color: var(--White);
+}
+
+.result-side {
+  width: 50%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+  border-radius: 2em;
+  color: var(--White);
+}
+.result-side h3 {
+  color: var(--Light-lavender);
+  margin-bottom: 1.5em;
+  font-weight: 700;
+}
+.result-side .result-name {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--White);
+  margin-bottom: 0.5em;
+}
+.result-side .info {
+  font-size: 1em;
+  color: var(--Light-lavender);
+  margin: 0 2em 1em 2em;
+}
+
+.circle {
+  width: 10em;
+  text-align: center;
+  padding: 2em;
+  border-radius: 50%;
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+  margin-bottom: 1.5em;
+}
+.circle .main-result {
+  font-size: 4em;
+  font-weight: 500;
+  color: var(--White);
+}
+.circle p {
+  font-size: 1em;
+  color: var(--Light-lavender-text);
+  font-weight: 500;
+}
+
+.summary-side {
+  width: 50%;
+  padding: 2em;
+}
+
+.summary-title {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-weight: 800;
+  color: var(--Dark-gray-blue);
+}
+
+.summary-containers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.value {
+  display: flex;
+  color: var(--Pale-blue);
+  font-weight: 700;
+  gap: 0.3em;
+}
+
+.main-value {
+  color: var(--Dark-gray-blue);
+  font-weight: 800;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 2em;
+}
+
+.name {
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name p {
+  margin-left: 0.5em;
+}
+
+.reaction {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: var(--Light-red-bg);
+}
+.reaction .name {
+  color: var(--Light-red);
+}
+
+.memory {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: var(--Orangey-yellow-bg);
+}
+.memory .name {
+  color: var(--Orangey-yellow);
+}
+
+.verbal {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: var(--Green-teal-bg);
+}
+.verbal .name {
+  color: var(--Green-teal);
+}
+
+.visual {
+  padding: 1em;
+  border-radius: 0.5em;
+  background-color: var(--Cobalt-blue-bg);
+}
+.visual .name {
+  color: var(--Cobalt-blue);
+}
+
+.btn-continue {
+  width: 100%;
+  border-radius: 2em;
+  border: none;
+  padding: 1.3em;
+  background-color: var(--Dark-gray-blue);
+  color: var(--White);
+  font-size: 0.9em;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-continue:hover {
+  background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+}
+
+@media only screen and (max-width: 376px) {
+  body {
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+  }
+  .summary-side {
+    width: 100%;
+  }
+  .result-side {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    width: 100%;
+  }
+  .result-side .result-name {
+    font-size: 1.5em;
+  }
+  .circle {
+    padding: 1.5em;
+  }
+}/*# sourceMappingURL=style.css.map */
